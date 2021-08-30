@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'recipes/show'
+  get 'recipes/edit'
   root 'cuisines#index'
   get 'signup' => 'users#new'
   get 'login' => 'sessions#new'

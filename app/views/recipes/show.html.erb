@@ -11,6 +11,11 @@
       </div> 
       
       <!-- Add links here -->
-  
+      <% if current_user && current_user.editor? %> 
+        <p class="recipe-edit"> 
+            <%= link_to "Edit Recipe", edit_recipe_path(@recipe.id) %> 
+        </p> 
+        <% end %> 
     </div>
 </div>
+  
