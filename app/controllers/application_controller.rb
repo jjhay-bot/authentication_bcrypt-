@@ -12,5 +12,9 @@ class ApplicationController < ActionController::Base
     def require_user
       redirect_to login_path unless current_user.editor? 
     end    
+
+    def require_admin
+      redirect_to login_path unless current_user.admin? 
+    end
  
 end

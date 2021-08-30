@@ -5,4 +5,8 @@ class User < ApplicationRecord
         self.role == 'editor' 
     end
 
+    def admin? 
+        self.role == 'admin' 
+    end
+
 end

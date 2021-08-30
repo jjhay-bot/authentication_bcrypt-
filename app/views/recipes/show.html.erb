@@ -15,7 +15,15 @@
         <p class="recipe-edit"> 
             <%= link_to "Edit Recipe", edit_recipe_path(@recipe.id) %> 
         </p> 
-        <% end %> 
+      <% end %> 
+
+      <% if current_user && current_user.admin? %> 
+        <p class="recipe-delete"><%= link_to "Delete", recipe_path(@recipe), method: "delete" %><p> 
+      <% end %> 
+
+
+
+
     </div>
 </div>
   
