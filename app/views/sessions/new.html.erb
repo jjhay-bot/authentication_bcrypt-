@@ -1,8 +1,8 @@
 <div class="login">
     <div class="container">
       <%= form_for(:session, url: login_path) do |f| %>
-        <%= f.email_field :email, :placeholder => 'Email' %>
-        <%= f.password_field :password, :placeholder => 'Password' %>
+        <%= f.email_field :email, :placeholder => 'Email', :value => "mateo@email.com" %>
+        <%= f.password_field :password, :placeholder => 'Password', :value => "Mateo1" %>
         <%= f.submit "Log in", :class => "form-btn" %>
       <% end %>
     </div>
